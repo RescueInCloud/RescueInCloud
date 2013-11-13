@@ -140,6 +140,9 @@
   
   <h2>
     What's next?
+	<?php
+	echo phpinfo();
+	?>
   </h2>
   <ul>
     <li>
