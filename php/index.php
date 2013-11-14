@@ -1,3 +1,5 @@
 <?php
-phpinfo();
+
+   header( 'Location: rescueincloud/index.php' ) ;
+
 ?>
