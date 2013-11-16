@@ -40,7 +40,7 @@ return array(
 
 		'urlManager'=>array(
 			'urlFormat'=>'path',
-                        //'showScriptName'=>false, XXX Para usar esta opcion hay que modificar apache tanto en local como en openshift cloud
+                        'showScriptName'=>false,// XXX Para usar esta opcion hay que modificar apache tanto en local como en openshift cloud
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
