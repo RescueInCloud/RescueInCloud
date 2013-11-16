@@ -62,7 +62,7 @@ return array(
 //		),
             
                 'db'=>array(
-			'connectionString' => 'mysql:host=rescueincloud-rczone.rhcloud.com;dbname=rescueincloud;charset=utf8',
+			'connectionString' => 'mysql:host=127.5.175.2:3306;dbname=rescueincloud;charset=utf8',
 			'emulatePrepare' => true,
 			'username' => 'adminiMmTlHC',
 			'password' => 'bYdjaCBMcdAU',
