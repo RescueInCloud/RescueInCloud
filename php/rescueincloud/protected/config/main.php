@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 //$host = 'localhost';
 $host = getenv('OPENSHIFT_MYSQL_DB_HOST');// . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
-$dbname = 'rescueincloud';//getenv('OPENSHIFT_APP_NAME');
+$dbname = getenv('OPENSHIFT_APP_NAME');
 $username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
 $password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
 
@@ -66,7 +66,7 @@ return array(
 //			'password' => '',
 //			'charset' => 'utf8',
 //		),
-            
+                //Openshift cloud database
                 'db'=>array(
 			'connectionString' => 'mysql:host='.$host.';dbname='.$dbname.';charset=utf8',
 			'emulatePrepare' => true,
