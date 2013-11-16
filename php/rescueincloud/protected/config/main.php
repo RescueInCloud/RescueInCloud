@@ -53,11 +53,19 @@ return array(
 //		),
 		// uncomment the following to use a MySQL database
 		
-		'db'=>array(
+//		'db'=>array(
+//			'connectionString' => 'mysql:host=localhost;dbname=rescueincloud;charset=utf8',
+//			'emulatePrepare' => true,
+//			'username' => 'root',
+//			'password' => '',
+//			'charset' => 'utf8',
+//		),
+            
+                'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=rescueincloud;charset=utf8',
 			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
+			'username' => 'adminiMmTlHC',
+			'password' => 'bYdjaCBMcdAU',
 			'charset' => 'utf8',
 		),
                 
