@@ -1,6 +1,6 @@
 <?php
 
-class infoPHPOpenshiftController extends Controller
+class InfoPHPOpenshiftController extends Controller
 {
         
 	public function actionIndex()
