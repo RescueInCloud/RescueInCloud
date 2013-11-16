@@ -5,8 +5,12 @@
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
-$host = 'localhost';
-//$host = getenv('OPENSHIFT_MYSQL_DB_HOST') . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
+//$host = 'localhost';
+$host = getenv('OPENSHIFT_MYSQL_DB_HOST') . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
+$dbname = getenv('OPENSHIFT_APP_NAME');
+$username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+$password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
@@ -64,10 +68,10 @@ return array(
 //		),
             
                 'db'=>array(
-			'connectionString' => 'mysql:host='.$host.';dbname=rescueincloud;charset=utf8',
+			'connectionString' => 'mysql:host='.$host.';dbname='.$dbname.';charset=utf8',
 			'emulatePrepare' => true,
-			'username' => 'adminiMmTlHC',
-			'password' => 'bYdjaCBMcdAU',
+			'username' => $username,
+			'password' => $password,
 			'charset' => 'utf8',
 		),
                 
