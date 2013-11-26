@@ -26,9 +26,18 @@ class FarmacosController extends Controller
   
     public function actionAddFarmacos()
     {
-            //$model= new Farmacos();
-            //$this->render('AddFarmacos',compact("model"));
-            $this->render('AddFarmacos');
+            $model= new Farmacos();
+            
+            if(isset($_POST["Farmacos"]))
+            {
+                if($model->validate())
+                {
+                    die("NO Hay errroooooores");
+                }
+            }      
+            
+            $this->render('AddFarmacos',compact("model"));
+            //$this->render('AddFarmacos');
     }
         
 }

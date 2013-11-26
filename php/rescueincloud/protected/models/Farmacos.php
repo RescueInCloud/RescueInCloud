@@ -2,6 +2,10 @@
 class Farmacos extends CActiveRecord
 {
     private $connection;
+    public $no_usuario;
+    public $no_farmaco;
+    public $no_fabricante;
+    public $no_quimico;
     
     public function __construct()
     {
@@ -24,6 +28,17 @@ class Farmacos extends CActiveRecord
         
         $rows=$this->connection->createCommand($sql)->queryAll();
         return $rows;
+    }
+    
+    public function rules()
+    {
+        return array
+        (
+            //array("no_usuario,no_farmaco,no_fabricante,no_quimico","required"),
+            array("no_usuario,no_farmaco,no_fabricante,no_quimico","ext.FarmacosValidation"),
+            array("no_usuario","email")
+        );
+        
     }
 }
 ?>
