@@ -1,7 +1,6 @@
 <h1>Vista Agregar farmaco!!</h1>
 
 <?php echo CHtml::beginForm('','post', array("id"=>"form","name"=>"form")); ?>
-    
     <?php //echo CHtml::errorSummary($model); ?>
     
     <h4>Introduzca los siguientes campos:</h4>
@@ -18,7 +17,10 @@
     <p>
         Nombre quimico del farmaco: <?php echo CHtml::activeTextField($model,'no_quimico'); echo CHtml::error($model,'no_quimico'); ?>
     </p>
-
+    <p>
+        Descripcion del farmaco: <?php echo CHtml::activeTextArea($model,'des_farmaco'); echo CHtml::error($model,'des_farmaco'); ?>
+    </p>
+    
     <?php echo CHtml::submitButton('submit', array("value"=>"Crear Farmaco","title"=>"Crear Farmaco")); ?>
 <?php echo CHtml::endForm(); ?>
 
