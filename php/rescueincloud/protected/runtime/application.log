@@ -622,3 +622,311 @@ Stack trace:
 REQUEST_URI=/rescueincloud/php/rescueincloud/test/cerrar
 HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/usuarios/logueado
 ---
+2013/12/03 13:58:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "LoginController".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/index.php
+---
+2013/12/03 13:59:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test/cerrar".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('test/cerrar')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/test/cerrar
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/login/logueado
+---
+2013/12/03 14:05:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test/cerrar".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('test/cerrar')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/test/cerrar
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/login/logueado
+---
+2013/12/03 14:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/
+---
+2013/12/03 14:47:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/index.php
+---
+2013/12/03 14:48:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/index.php
+---
+2013/12/03 14:48:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/index.php
+---
+2013/12/03 14:48:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/
+---
+2013/12/03 14:48:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/
+---
+2013/12/03 14:48:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/
+---
+2013/12/03 14:48:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/index.php
+---
+2013/12/03 14:48:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('init')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/init
+---
+2013/12/03 14:49:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('init')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/init
+---
+2013/12/03 14:49:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "initiate".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/
+---
+2013/12/03 14:50:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('init')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/init
+---
+2013/12/03 14:50:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('init')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/init
+---
+2013/12/03 14:50:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/
+---
+2013/12/03 14:50:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test/cerrar".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('test/cerrar')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/test/cerrar
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/login/logueado
+---
+2013/12/03 14:51:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "int".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('int')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/int
+---
+2013/12/03 14:51:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('init')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/init
+---
+2013/12/03 14:52:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('init')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/init
+---
+2013/12/03 14:52:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('init')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/init
+---
+2013/12/03 14:52:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('init')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/init
+---
+2013/12/03 14:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/index.php
+---
+2013/12/03 14:52:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test/cerrar".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('test/cerrar')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/test/cerrar
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/login/logueado
+---
+2013/12/03 14:53:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "test/cerrar".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('test/cerrar')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/test/cerrar
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/login/logueado
+---
+2013/12/03 14:54:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('login/login')
+#3 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/login/login
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/login/logueado
+---
+2013/12/03 14:55:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('login/login')
+#3 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/login/login
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/login/logueado
+---
+2013/12/03 14:55:32 [error] [exception.CException] exception 'CException' with message 'LoginController cannot find the requested view "index".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\protected\controllers\LoginController.php(37): CController->render('index', Array)
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\actions\CInlineAction.php(49): LoginController->actionIndex()
+#3 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('login')
+#8 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/login
+---
+2013/12/03 14:56:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/index.php
+---
+2013/12/03 14:56:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/
+---
+2013/12/03 14:57:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "init".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/index.php
+---
+2013/12/03 15:02:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('login/login')
+#3 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/login/login
+---
+2013/12/03 15:02:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('login/login')
+#3 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/login/login
+---
+2013/12/03 15:02:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CController.php(270): CController->missingAction('login')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(282): CController->run('login')
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('login/login')
+#3 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/login/login
+---

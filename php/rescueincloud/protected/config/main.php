@@ -14,6 +14,7 @@ $password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
+        'defaultController' => 'init',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
