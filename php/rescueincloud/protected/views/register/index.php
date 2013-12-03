@@ -1,6 +1,6 @@
 <?php
-/* @var $this SiteController */
-/* @var $model LoginForm */
+/* @var $this RegisterController */
+/* @var $model RegisterForm */
 /* @var $form CActiveForm  */
 
 $this->pageTitle=Yii::app()->name . ' - Login';
@@ -25,7 +25,7 @@ $this->breadcrumbs=array(
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'lalalal'); ?>//RECORDARAAAA
+		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username'); ?>
 		<?php echo $form->error($model,'username'); ?>
 	</div>
