@@ -1019,3 +1019,12 @@ Stack trace:
 REQUEST_URI=/rescueincloud/php/rescueincloud/login
 HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/login
 ---
+2013/12/03 16:23:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "protocolos".' in C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\web\CWebApplication.php(141): CWebApplication->runController('protocolos')
+#1 C:\xampp\htdocs\rescueincloud\php\rescueincloud\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\rescueincloud\php\rescueincloud\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/rescueincloud/php/rescueincloud/protocolos
+HTTP_REFERER=http://localhost/rescueincloud/php/rescueincloud/menu
+---

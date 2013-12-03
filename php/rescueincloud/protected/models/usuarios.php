@@ -31,7 +31,7 @@ class Usuarios extends CActiveRecord
     
      //Create
     public function registerUsuario($email_usuario, $dni, $nombre, $apellidos, $genero, $fecha_nacimiento, $centro_trabajo){
-        $sql="insert into usuarios (email_usuario,dni, nombre, apellidos, genero, fecha_nacimiento, centro_trabajo) values ('{$email_usuario}', '{$dni}','{$nombre}', '{$apellidos}', '{$genero}', '{$fecha_nacimiento}', '{$centro_trabajo}')";
+        $sql="insert into Usuarios (email_usuario,dni, nombre, apellidos, genero, fecha_nacimiento, centro_trabajo) values ('{$email_usuario}', '{$dni}','{$nombre}', '{$apellidos}', '{$genero}', '{$fecha_nacimiento}', '{$centro_trabajo}')";
         $rows_affected=$this->connection->createCommand($sql)->execute();
         return $rows_affected;
     }
@@ -40,14 +40,14 @@ class Usuarios extends CActiveRecord
     //Read
     public function getUsuarios()
     {
-        $sql="select * from usuarios;";      
+        $sql="select * from Usuarios;";      
         $rows=$this->connection->createCommand($sql)->queryAll();
         return $rows;
     }
     
     //Read
     public function getUsuario($email_usuario){
-        $sql="select * from usuarios where 1=1 and ";
+        $sql="select * from Usuarios where 1=1 and ";
         $sql.= "email_usuario='".$email_usuario."' ;";
         $rows=$this->connection->createCommand($sql)->queryAll();
         return $rows;
@@ -61,7 +61,7 @@ class Usuarios extends CActiveRecord
     
     //Delete
     public function deleteUsuario($email_usuario){
-        $sql="delete from usuarios where 1=1 and ";
+        $sql="delete from Usuarios where 1=1 and ";
         $sql.= "email_usuario='".$email_usuario."' ;";
         
         $rows_affected=$this->connection->createCommand($sql)->execute();
