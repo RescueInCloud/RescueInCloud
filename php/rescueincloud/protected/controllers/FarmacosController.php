@@ -57,11 +57,13 @@ class FarmacosController extends Controller
                     $res_buscar=$model->buscarFarmacos();
                     
                     $this->render('ResultadosFarmacos',compact("res_buscar"));
-                    $this->redirect(Yii::app()->request->baseUrl."/Farmacos/ResultadosFarmacos");
+                    //$this->redirect(Yii::app()->request->baseUrl."/Farmacos/ResultadosFarmacos");
                     
                 //}
+            } else {
+               $this->render('BuscarFarmacos',compact("model")); 
             }
-            $this->render('BuscarFarmacos',compact("model"));
+            
     }
         
 }
