@@ -23,12 +23,6 @@ class Usuarios extends CActiveRecord
         );
     }
     
-    public function login()
-    {
-            $user=Usuarios::model()->find('email_usuario=?',array($this->login));
-            return $user;
-    }
-    
      //Create
     public function registerUsuario($email_usuario, $dni, $nombre, $apellidos, $genero, $fecha_nacimiento, $centro_trabajo){
         $sql="insert into Usuarios (email_usuario,dni, nombre, apellidos, genero, fecha_nacimiento, centro_trabajo) values ('{$email_usuario}', '{$dni}','{$nombre}', '{$apellidos}', '{$genero}', '{$fecha_nacimiento}', '{$centro_trabajo}')";
@@ -36,6 +30,12 @@ class Usuarios extends CActiveRecord
         return $rows_affected;
     }
     
+    //Read
+    public function login()
+    {
+            $user=Usuarios::model()->find('email_usuario=?',array($this->login));
+            return $user;
+    }
     
     //Read
     public function getUsuarios()
