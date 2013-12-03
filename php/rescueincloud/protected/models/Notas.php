@@ -16,7 +16,7 @@ class Notas extends CActiveRecord {
     
     //Create
     public function createNota($nombre_nota, $email_usuario, $descripcion, $id_farmaco=NULL){
-        $sql="insert into notas (nombre_nota,email_usuario,id_farmaco,descripcion) values ('{$nombre_nota}', '{$email_usuario}','{$id_farmaco}', '{$descripcion}')";
+        $sql="insert into Notas (nombre_nota,email_usuario,id_farmaco,descripcion) values ('{$nombre_nota}', '{$email_usuario}','{$id_farmaco}', '{$descripcion}')";
         $rows_affected=$this->connection->createCommand($sql)->execute();
         return $rows_affected;
     }
@@ -25,7 +25,7 @@ class Notas extends CActiveRecord {
     //Read
     public function getNotas($email_usuario)
     {
-        $sql="select * from notas where 1=1 and ";
+        $sql="select * from Notas where 1=1 and ";
         $sql.= "email_usuario='".$email_usuario."' ;";     
         $rows=$this->connection->createCommand($sql)->queryAll();
         return $rows;
@@ -33,7 +33,7 @@ class Notas extends CActiveRecord {
     
     //Read
     public function getNota($nombre_nota, $email_usuario){
-        $sql="select * from notas where 1=1 and ";
+        $sql="select * from Notas where 1=1 and ";
         $sql.= "nombre_nota='".$nombre_nota."' and ";
         $sql.= "email_usuario='".$email_usuario."' ;";
         $rows=$this->connection->createCommand($sql)->queryAll();
@@ -48,7 +48,7 @@ class Notas extends CActiveRecord {
     
     //Delete
     public function deleteNota($nombre_nota, $email_usuario){
-        $sql="delete from notas where 1=1 and ";
+        $sql="delete from Notas where 1=1 and ";
         $sql.= "nombre_nota='".$nombre_nota."' and ";
         $sql.= "email_usuario='".$email_usuario."' ;";
         
