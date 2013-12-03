@@ -30,7 +30,7 @@ class Usuarios extends CActiveRecord
     }
     
      //Create
-    public function createUsuario($email_usuario, $dni, $nombre, $apellidos, $genero, $fecha_nacimiento, $centro_trabajo){
+    public function registerUsuario($email_usuario, $dni, $nombre, $apellidos, $genero, $fecha_nacimiento, $centro_trabajo){
         $sql="insert into usuarios (email_usuario,dni, nombre, apellidos, genero, fecha_nacimiento, centro_trabajo) values ('{$email_usuario}', '{$dni}','{$nombre}', '{$apellidos}', '{$genero}', '{$fecha_nacimiento}', '{$centro_trabajo}')";
         $rows_affected=$this->connection->createCommand($sql)->execute();
         return $rows_affected;

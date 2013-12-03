@@ -60,21 +60,21 @@ return array(
 //		),
 		
 		// uncomment the following to use a local MySQL database
-		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=rescueincloud;charset=utf8',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => '',
-			'charset' => 'utf8',
-		),
-                //Openshift cloud database
-//                'db'=>array(
-//			'connectionString' => 'mysql:host='.$host.';dbname='.$dbname.';charset=utf8',
+//		'db'=>array(
+//			'connectionString' => 'mysql:host=localhost;dbname=rescueincloud;charset=utf8',
 //			'emulatePrepare' => true,
-//			'username' => $username,
-//			'password' => $password,
+//			'username' => 'root',
+//			'password' => '',
 //			'charset' => 'utf8',
 //		),
+                //Openshift cloud database
+                'db'=>array(
+			'connectionString' => 'mysql:host='.$host.';dbname='.$dbname.';charset=utf8',
+			'emulatePrepare' => true,
+			'username' => $username,
+			'password' => $password,
+			'charset' => 'utf8',
+		),
                 
 		
 		'errorHandler'=>array(

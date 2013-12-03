@@ -6,7 +6,7 @@ class LoginController extends Controller {
     {
         $session=new CHttpSession;
         $session->open();
-        if(isset($session["login"]))
+        if(isset($session["username"]))
         {
             $this->redirect(Yii::app()->request->baseUrl."/login/logueado"); 
             return;
@@ -20,7 +20,6 @@ class LoginController extends Controller {
             if($model->validate())
             {
                 $login=$model->login();
-                //print_r($login);exit;
                 if(sizeof($login)==0)
                 {
                     Yii::app()->user->setFlash('mensaje','Los datos ingresados no son correctos');
@@ -29,8 +28,8 @@ class LoginController extends Controller {
                 {
                    $session=new CHttpSession;
                     $session->open();
-                    $session['login'] = $_POST["Usuarios"]["login"];
-                    $this->redirect(Yii::app()->request->baseUrl."/login/logueado"); 
+                    $session['username'] = $_POST["Usuarios"]["login"];
+                    $this->redirect(Yii::app()->request->baseUrl."/menu"); 
                 }
             }
         }
@@ -41,10 +40,11 @@ class LoginController extends Controller {
     {
         $session=new CHttpSession;
         $session->open();
-        if(isset($session["login"]))
+        if(isset($session["username"]))
         {
             
-            $this->render("logueado",compact("session"));
+            //$this->render("logueado",compact("session"));
+            $this->redirect(Yii::app()->request->baseUrl."/menu"); 
         }else
         {
             $this->redirect(Yii::app()->request->baseUrl."/login");
@@ -57,7 +57,6 @@ class LoginController extends Controller {
         $session->open();
         $session->destroy();
         $this->redirect(Yii::app()->request->baseUrl."/login");
-        //$this->redirect(Yii::app()->user->returnUrl);
     } 
     
 }

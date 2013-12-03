@@ -1,7 +1,7 @@
 <?php
 //header('Content-Type: text/html; charset=utf-8');
 
-class Notas_intervencion extends CActiveRecord {
+class Notas extends CActiveRecord {
     private $connection;
     
     public function __construct(){

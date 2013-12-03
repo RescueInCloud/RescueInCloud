@@ -6,23 +6,21 @@
  */
 
 /**
- * Description of InitController
+ * Description of ControllerAuth
  *
  * @author Ricardo
  */
-class InitController extends Controller {
+class ControllerWithAuthentification extends Controller{
     
-    public function actionIndex()
-    {      
+    public function init()
+    {
         $session=new CHttpSession;
         $session->open();
-        if(isset($session["username"]))
+        if(!isset($session["username"]))
         {
-            $this->redirect(Yii::app()->request->baseUrl."/login/logueado"); 
-        }
-        else{
             $this->redirect(Yii::app()->request->baseUrl."/login"); 
         }
+        
     }
 }
 
