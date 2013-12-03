@@ -1,4 +1,4 @@
-<h1>Listando los fármacos!</h1>
+<h1>Listando los farmacos:</h1>
 <ul>
     <?php 
     foreach ($datos as $dato)

@@ -1,4 +1,4 @@
-<h1>Vista Agregar farmaco!!</h1>
+<h1>Agregar farmaco:</h1>
 
 <?php echo CHtml::beginForm('','post', array("id"=>"form","name"=>"form")); ?>
     <?php //echo CHtml::errorSummary($model); ?>

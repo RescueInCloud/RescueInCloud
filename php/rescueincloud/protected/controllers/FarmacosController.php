@@ -44,6 +44,25 @@ class FarmacosController extends Controller
             }     
             $this->render('AddFarmacos',compact("model"));
     }
+    
+    
+    public function actionBuscarFarmacos()
+    {
+            $model= new Farmacos();
+            if(isset($_POST["Farmacos"]))
+            {
+                $model->attributes=$_POST['Farmacos'];
+                //if($model->validate())
+                //{
+                    $res_buscar=$model->buscarFarmacos();
+                    
+                    $this->render('ResultadosFarmacos',compact("res_buscar"));
+                    $this->redirect(Yii::app()->request->baseUrl."/Farmacos/ResultadosFarmacos");
+                    
+                //}
+            }
+            $this->render('BuscarFarmacos',compact("model"));
+    }
         
 }
 ?>
