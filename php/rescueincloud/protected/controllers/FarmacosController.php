@@ -65,6 +65,26 @@ class FarmacosController extends Controller
             }
             
     }
+    
+    public function actionBuscarFarmacosJQ()
+    {
+            $model= new Farmacos();
+            if(isset($_POST["Farmacos"]))
+            {
+                $model->attributes=$_POST['Farmacos'];
+                //if($model->validate())
+                //{
+                    //$res_buscar=$model->buscarFarmacos();
+                    die("Prueba Busqueda con JQuery");
+                    //$this->render('ResultadosFarmacos',compact("res_buscar"));
+                    
+                    
+                //}
+            } else {
+               $this->render('BuscarFarmacosJQ',compact("model")); 
+            }
+            
+    }
         
 }
 ?>

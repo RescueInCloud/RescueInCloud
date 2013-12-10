@@ -8,4 +8,10 @@
 <?php echo CHtml::link("Introducir Farmaco",Yii::app()->request->baseUrl."/Farmacos/AddFarmacos",array("class"=>"link","title"=>"Introducir")); ?>
 </li>
 
+<li>
+<?php echo CHtml::link("Buscar Farmaco",Yii::app()->request->baseUrl."/Farmacos/BuscarFarmacos",array("class"=>"link","title"=>"Buscar")); ?>
+</li>
 
+<li>
+<?php echo CHtml::link("Buscar Farmaco JQuery",Yii::app()->request->baseUrl."/Farmacos/BuscarFarmacosJQ",array("class"=>"link","title"=>"BuscarJQuery")); ?>
+</li>

@@ -11,7 +11,9 @@
         
     <?php echo CHtml::submitButton('submit', array("value"=>"Buscar Farmaco","title"=>"Buscar Farmaco")); ?>
 <?php echo CHtml::endForm(); ?>
+<hr />
     
 <hr />
 <?php echo CHtml::link("Volver Atras",Yii::app()->request->baseUrl."/Farmacos",array("class"=>"link","title"=>"Volver atras")); ?>
 </p>
+
