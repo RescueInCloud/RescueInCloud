@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost
--- Tiempo de generación: 03-12-2013 a las 16:33:19
+-- Tiempo de generación: 18-11-2013 a las 22:37:23
 -- Versión del servidor: 5.1.41
 -- Versión de PHP: 5.3.1
 
@@ -22,42 +22,82 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Farmacos`
+-- Estructura de tabla para la tabla `farmacos_tmp`
 --
 
-CREATE TABLE IF NOT EXISTS `Farmacos` (
-  `id_farmaco` varchar(25) NOT NULL,
+CREATE TABLE IF NOT EXISTS `farmacos_tmp` (
+  `id_farmaco` int(11) NOT NULL AUTO_INCREMENT,
   `email_usuario` varchar(100) NOT NULL,
   `nombre_farmaco` varchar(100) NOT NULL,
   `nombre_fabricante` varchar(100) NOT NULL,
-  `nombre_quimico` varchar(100) NOT NULL,
-  `creado_en` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `presentacion_farmaco` varchar(100) NOT NULL,
+  `tipo_administracion` varchar(100) NOT NULL,
+  `creado_en` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `modificado_en` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `borrado` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id_farmaco`,`email_usuario`),
-  KEY `email_usuario` (`email_usuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+  `descripcion_farmaco` varchar(500) NOT NULL,
+  `borrado` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id_farmaco`),
+  UNIQUE KEY `id_farmaco` (`id_farmaco`),
+  UNIQUE KEY `nombre_farmaco` (`nombre_farmaco`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1;
 --
--- Volcar la base de datos para la tabla `Farmacos`
+-- Volcar la base de datos para la tabla `farmacos_tmp`
 --
 
-INSERT INTO `Farmacos` (`id_farmaco`, `email_usuario`, `nombre_farmaco`, `nombre_fabricante`, `nombre_quimico`, `creado_en`, `modificado_en`, `borrado`) VALUES
-('f1', 'ricardocb48@gmail.com', 'f1', 'Senosiain', 'f1', '2013-11-15 16:26:24', '0000-00-00 00:00:00', 0),
-('f2', 'ricardocb48@gmail.com', 'f2', 'Senosiain', 'f2', '2013-11-15 16:26:56', '0000-00-00 00:00:00', 0),
-('f3', 'ale7jandra.89@gmail.com', 'Paracetamol', 'Cinfa', 'Acetaminofén', '2013-11-18 21:03:00', '0000-00-00 00:00:00', 0),
-('f4', 'ale7jandra.89@gmail.com', 'Aspirina', 'Bayer', 'Ácido acetilsalicílico', '2013-11-18 21:05:00', '0000-00-00 00:00:00', 0);
+INSERT INTO `farmacos_tmp` (`id_farmaco`, `email_usuario`, `nombre_farmaco`, `nombre_fabricante`, `presentacion_farmaco`, `tipo_administracion`, `creado_en`, `modificado_en`, `descripcion_farmaco`, `borrado`) VALUES
+(1, 'ale7jandra.89@gmail.com', 'Aspirina', 'Bayer', '500mg', 'comprimidos', '2014-01-13 23:46:18', '0000-00-00 00:00:00', '', 0),
+(2, 'ale7jandra.89@gmail.com', 'Diazepam', 'Bayer', 'sobres', 'oral', '2014-01-14 00:27:03', '0000-00-00 00:00:00', '', 0),
+(3, 'ale7jandra.89@gmail.com', 'Paracetamol', 'Cinfa', 'Comprimidos', 'oral', '2014-01-22 23:07:31', '0000-00-00 00:00:00', '', 0),
+(4, 'ale7jandra.89@gmail.com', 'Gelocatil', 'Bayer', 'Comprimidos', 'oral', '2014-01-22 23:31:51', '0000-00-00 00:00:00', '', 0);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Notas`
+-- Estructura de tabla para la tabla `farmacos`
+--
+/*
+--1. modificar tabla farmacos_V3 a farmacos sin campo email_usuario.
+2. crear relacion nm farmacos y usuarios.
+3. modificar el tipo del campo id_farmaco de la relacion protocolos-farmacos 
+
+---definir la posibilidad de la modificacion de un farmaco: cuanto afecta a un usuario que comparte dicho farmaco.
+
+*/
+CREATE TABLE IF NOT EXISTS `farmacos` (
+  `id_farmaco` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre_farmaco` varchar(100) NOT NULL,
+  `nombre_fabricante` varchar(100) NOT NULL,
+  `presentacion_farmaco` varchar(100) NOT NULL,
+  `tipo_administracion` varchar(100) NOT NULL,
+  `creado_en` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `modificado_en` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `descripcion_farmaco` varchar(500) NOT NULL,
+  `borrado` tinyint(4) NOT NULL,
+  PRIMARY KEY (`id_farmaco`),
+  UNIQUE KEY `id_farmaco` (`id_farmaco`),
+  UNIQUE KEY `nombre_farmaco` (`nombre_farmaco`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Volcar la base de datos para la tabla `farmacos`
 --
 
-CREATE TABLE IF NOT EXISTS `Notas` (
+INSERT INTO `farmacos` (`id_farmaco`, `nombre_farmaco`, `nombre_fabricante`, `presentacion_farmaco`, `tipo_administracion`, `creado_en`, `modificado_en`, `descripcion_farmaco`, `borrado`) VALUES
+(1, 'Aspirina', 'Bayer', '500mg', 'comprimidos', '2014-01-13 23:46:18', '0000-00-00 00:00:00', '', 0),
+(2, 'Diazepam', 'Bayer', 'sobres', 'oral', '2014-01-14 00:27:03', '0000-00-00 00:00:00', '', 0),
+(3, 'Paracetamol', 'Cinfa', 'Comprimidos', 'oral', '2014-01-22 23:07:31', '0000-00-00 00:00:00', '', 0),
+(4, 'Gelocatil', 'Bayer', 'Comprimidos', 'oral', '2014-01-22 23:31:51', '0000-00-00 00:00:00', '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `notas`
+--
+
+CREATE TABLE IF NOT EXISTS `notas` (
   `nombre_nota` varchar(25) NOT NULL,
   `email_usuario` varchar(100) NOT NULL,
-  `id_farmaco` varchar(25) DEFAULT NULL,
+  `id_farmaco` int(11) NOT NULL,
   `descripcion` text NOT NULL,
   `nota_creada_en` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `nota_modificada_en` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
@@ -68,23 +108,17 @@ CREATE TABLE IF NOT EXISTS `Notas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcar la base de datos para la tabla `Notas`
+-- Volcar la base de datos para la tabla `notas`
 --
 
-INSERT INTO `Notas` (`nombre_nota`, `email_usuario`, `id_farmaco`, `descripcion`, `nota_creada_en`, `nota_modificada_en`, `borrado`) VALUES
-('nota1', 'ricardocb48@gmail.com', 'f1', 'Una nota de prueba', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0),
-('nota2', 'ricardocb48@gmail.com', 'f2', 'Una nota de prueba2', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0),
-('nota3', 'ricardocb48@gmail.com', 'f1', 'Una nota de prueba3 con fármaco f1', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0),
-('nota4', 'ricardocb48@gmail.com', NULL, 'Una nota de prueba4', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0),
-('nota5', 'ricardocb48@gmail.com', NULL, 'Una nota de prueba5', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 0);
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Protocolos`
+-- Estructura de tabla para la tabla `protocolos`
 --
 
-CREATE TABLE IF NOT EXISTS `Protocolos` (
+CREATE TABLE IF NOT EXISTS `protocolos` (
   `nombre_protocolo` varchar(25) NOT NULL,
   `email_usuario` varchar(100) NOT NULL,
   `protocolo` text NOT NULL,
@@ -96,10 +130,10 @@ CREATE TABLE IF NOT EXISTS `Protocolos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcar la base de datos para la tabla `Protocolos`
+-- Volcar la base de datos para la tabla `protocolos`
 --
 
-INSERT INTO `Protocolos` (`nombre_protocolo`, `email_usuario`, `protocolo`, `protocolo_creado_en`, `protocolo_modificado_en`, `borrado`) VALUES
+INSERT INTO `protocolos` (`nombre_protocolo`, `email_usuario`, `protocolo`, `protocolo_creado_en`, `protocolo_modificado_en`, `borrado`) VALUES
 ('p1', 'ricardocb48@gmail.com', 'protocolo xaxi piruli codificado de alguna manera', '2013-11-15 16:28:58', '0000-00-00 00:00:00', 0),
 ('p2', 'ricardocb48@gmail.com', 'protocolo xaxi piruli codificado de alguna manera', '2013-11-15 16:29:12', '0000-00-00 00:00:00', 0),
 ('p3', 'ale7jandra.89@gmail.com', 'Protocolo para fracturas de extremidades superiores.', '2013-11-18 22:36:00', '0000-00-00 00:00:00', 0);
@@ -107,12 +141,12 @@ INSERT INTO `Protocolos` (`nombre_protocolo`, `email_usuario`, `protocolo`, `pro
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Relnm_Protocolos_Farmacos`
+-- Estructura de tabla para la tabla `relnm_protocolos_farmacos`
 --
 
-CREATE TABLE IF NOT EXISTS `Relnm_Protocolos_Farmacos` (
+CREATE TABLE IF NOT EXISTS `relnm_protocolos_farmacos` (
   `nombre_protocolo` varchar(25) NOT NULL,
-  `id_farmaco` varchar(25) NOT NULL,
+  `id_farmaco` int(11) NOT NULL,
   `rel_creada_en` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `rel_actualizada_en` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   PRIMARY KEY (`nombre_protocolo`,`id_farmaco`),
@@ -120,21 +154,47 @@ CREATE TABLE IF NOT EXISTS `Relnm_Protocolos_Farmacos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcar la base de datos para la tabla `Relnm_Protocolos_Farmacos`
+-- Volcar la base de datos para la tabla `relnm_protocolos_farmacos`
 --
 
-INSERT INTO `Relnm_Protocolos_Farmacos` (`nombre_protocolo`, `id_farmaco`, `rel_creada_en`, `rel_actualizada_en`) VALUES
-('p1', 'f1', '2013-11-15 16:30:25', '0000-00-00 00:00:00'),
-('p1', 'f2', '2013-11-15 16:30:34', '0000-00-00 00:00:00'),
-('p2', 'f1', '2013-11-15 16:30:42', '0000-00-00 00:00:00');
+INSERT INTO `relnm_protocolos_farmacos` (`nombre_protocolo`, `id_farmaco`, `rel_creada_en`, `rel_actualizada_en`) VALUES
+('p1', '1', '2013-11-15 16:30:25', '0000-00-00 00:00:00'),
+('p1', '2', '2013-11-15 16:30:34', '0000-00-00 00:00:00'),
+('p2', '1', '2013-11-15 16:30:42', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `Usuarios`
+-- Estructura de tabla para la tabla `relnm_farmacos_usuarios`
 --
 
-CREATE TABLE IF NOT EXISTS `Usuarios` (
+CREATE TABLE IF NOT EXISTS `relnm_farmacos_usuarios` (
+  `email_usuario` varchar(100) NOT NULL,
+  `id_farmaco` int(11) NOT NULL,
+  `rel_creada_en` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `rel_actualizada_en` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`email_usuario`,`id_farmaco`),
+  KEY `id_farmaco` (`id_farmaco`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `relnm_farmacos_usuarios`
+--
+
+INSERT INTO `relnm_farmacos_usuarios` (`email_usuario`, `id_farmaco`, `rel_creada_en`, `rel_actualizada_en`) VALUES
+('ale7jandra.89@gmail.com', '1', '2013-11-15 16:30:25', '0000-00-00 00:00:00'),
+('ale7jandra.89@gmail.com', '2', '2013-11-15 16:30:34', '0000-00-00 00:00:00');
+
+-- --------------------------------------------------------
+
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+CREATE TABLE IF NOT EXISTS `usuarios` (
   `email_usuario` varchar(100) NOT NULL,
   `dni` varchar(9) NOT NULL,
   `nombre` varchar(30) NOT NULL,
@@ -149,10 +209,10 @@ CREATE TABLE IF NOT EXISTS `Usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Volcar la base de datos para la tabla `Usuarios`
+-- Volcar la base de datos para la tabla `usuarios`
 --
 
-INSERT INTO `Usuarios` (`email_usuario`, `dni`, `nombre`, `apellidos`, `genero`, `fecha_nacimiento`, `centro_trabajo`, `usuario_creado_en`, `usuario_actualizado_en`, `borrado`) VALUES
+INSERT INTO `usuarios` (`email_usuario`, `dni`, `nombre`, `apellidos`, `genero`, `fecha_nacimiento`, `centro_trabajo`, `usuario_creado_en`, `usuario_actualizado_en`, `borrado`) VALUES
 ('ale7jandra.89@gmail.com', '09135127X', 'Alejandra', 'González ', 2, '1989-08-03', 'Bayes', '2013-11-18 00:00:00', '0000-00-00 00:00:00', 0),
 ('ricardocb48@gmail.com', '51716889Ñ', 'Ricardo', 'Champa', 1, '1988-04-04', 'REDK', '2013-11-15 16:02:18', '0000-00-00 00:00:00', 0);
 
@@ -161,30 +221,32 @@ INSERT INTO `Usuarios` (`email_usuario`, `dni`, `nombre`, `apellidos`, `genero`,
 --
 
 --
--- Filtros para la tabla `Farmacos`
+-- Filtros para la tabla `notas`
 --
-ALTER TABLE `Farmacos`
-  ADD CONSTRAINT `farmaco_ibfk_1` FOREIGN KEY (`email_usuario`) REFERENCES `Usuarios` (`email_usuario`);
+ALTER TABLE `notas`
+  ADD CONSTRAINT `notas_ibfk_1` FOREIGN KEY (`email_usuario`) REFERENCES `usuarios` (`email_usuario`),
+  ADD CONSTRAINT `notas_ibfk_2` FOREIGN KEY (`id_farmaco`) REFERENCES `farmacos` (`id_farmaco`);
 
 --
--- Filtros para la tabla `Notas`
+-- Filtros para la tabla `protocolos`
 --
-ALTER TABLE `Notas`
-  ADD CONSTRAINT `Notas_ibfk_1` FOREIGN KEY (`email_usuario`) REFERENCES `Usuarios` (`email_usuario`),
-  ADD CONSTRAINT `Notas_ibfk_2` FOREIGN KEY (`id_farmaco`) REFERENCES `Farmacos` (`id_farmaco`);
+ALTER TABLE `protocolos`
+  ADD CONSTRAINT `protocolo_ibfk_1` FOREIGN KEY (`email_usuario`) REFERENCES `usuarios` (`email_usuario`);
 
 --
--- Filtros para la tabla `Protocolos`
+-- Filtros para la tabla `relnm_protocolos_farmacos`
 --
-ALTER TABLE `Protocolos`
-  ADD CONSTRAINT `protocolo_ibfk_1` FOREIGN KEY (`email_usuario`) REFERENCES `Usuarios` (`email_usuario`);
+ALTER TABLE `relnm_protocolos_farmacos`
+  ADD CONSTRAINT `relNM_protocolos_farmacos_ibfk_1` FOREIGN KEY (`nombre_protocolo`) REFERENCES `protocolos` (`nombre_protocolo`),
+  ADD CONSTRAINT `relNM_protocolos_farmacos_ibfk_2` FOREIGN KEY (`id_farmaco`) REFERENCES `farmacos` (`id_farmaco`);
 
 --
--- Filtros para la tabla `Relnm_Protocolos_Farmacos`
+-- Filtros para la tabla `relnm_farmacos_usuarios`
 --
-ALTER TABLE `Relnm_Protocolos_Farmacos`
-  ADD CONSTRAINT `Relnm_Protocolos_Farmacos_ibfk_1` FOREIGN KEY (`nombre_protocolo`) REFERENCES `Protocolos` (`nombre_protocolo`),
-  ADD CONSTRAINT `Relnm_Protocolos_Farmacos_ibfk_2` FOREIGN KEY (`id_farmaco`) REFERENCES `Farmacos` (`id_farmaco`);
+ALTER TABLE `relnm_farmacos_usuarios`
+  ADD CONSTRAINT `relNM_farmacos_usuarios_ibfk_1` FOREIGN KEY (`email_usuario`) REFERENCES `usuarios` (`email_usuario`),
+  ADD CONSTRAINT `relNM_farmacos_usuarios` FOREIGN KEY (`id_farmaco`) REFERENCES `farmacos` (`id_farmaco`);
+
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
