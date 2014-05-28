@@ -6,16 +6,16 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 
-//$host = getenv('OPENSHIFT_MYSQL_DB_HOST');// . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
-////$host = getenv('OPENSHIFT_MYSQL_DB_HOST'). ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
-//$dbname = getenv('OPENSHIFT_APP_NAME');
-//$username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-//$password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+$host = getenv('OPENSHIFT_MYSQL_DB_HOST');// . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
+//$host = getenv('OPENSHIFT_MYSQL_DB_HOST'). ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
+$dbname = getenv('OPENSHIFT_APP_NAME');
+$username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+$password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
 
-$host = "localhost";
-$dbname = "ems";
-$username = "root";
-$password = "";
+//$host = "localhost";
+//$dbname = "ems";
+//$username = "root";
+//$password = "";
 
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
