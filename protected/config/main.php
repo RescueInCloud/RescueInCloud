@@ -6,8 +6,8 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 
-$host = getenv('OPENSHIFT_MYSQL_DB_HOST');// . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
-//$host = getenv('OPENSHIFT_MYSQL_DB_HOST'). ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
+//$host = getenv('OPENSHIFT_MYSQL_DB_HOST');// . ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
+$host = getenv('OPENSHIFT_MYSQL_DB_HOST'). ':' . getenv('OPENSHIFT_MYSQL_DB_PORT');
 $dbname = getenv('OPENSHIFT_APP_NAME');
 $username = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
 $password = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');

@@ -8019,3 +8019,19 @@ Stack trace:
 REQUEST_URI=/git/bootstrap-sandbox/rescueincloud/init/validar
 HTTP_REFERER=http://localhost/git/bootstrap-sandbox/rescueincloud/init/login
 ---
+2014/05/28 11:57:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "assets/ico/favicon.ico".' in /Applications/XAMPP/xamppfiles/htdocs/git/SI_nuevo/RescueInCloud/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/git/SI_nuevo/RescueInCloud/framework/web/CWebApplication.php(141): CWebApplication->runController('assets/ico/favi...')
+#1 /Applications/XAMPP/xamppfiles/htdocs/git/SI_nuevo/RescueInCloud/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/git/SI_nuevo/RescueInCloud/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/git/SI_nuevo/RescueInCloud/assets/ico/favicon.ico
+---
+2014/05/28 11:57:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/favicon.ico".' in /Applications/XAMPP/xamppfiles/htdocs/git/SI_nuevo/RescueInCloud/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Applications/XAMPP/xamppfiles/htdocs/git/SI_nuevo/RescueInCloud/framework/web/CWebApplication.php(141): CWebApplication->runController('img/favicon.ico')
+#1 /Applications/XAMPP/xamppfiles/htdocs/git/SI_nuevo/RescueInCloud/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#2 /Applications/XAMPP/xamppfiles/htdocs/git/SI_nuevo/RescueInCloud/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/git/SI_nuevo/RescueInCloud/img/favicon.ico
+---
