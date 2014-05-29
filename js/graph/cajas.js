@@ -366,9 +366,9 @@ function pintarNuevaRelacion(id_padre, id_hijo){
 
 	var caja_hijo = protocolo.getCaja(id_hijo);
 	if(caja_hijo.tipo==0)
-		codigo = codigo +id_padre+'->'+id_hijo+'\n';
+		codigo = codigo +id_padre+'(right)->'+id_hijo+'\n';
 	else
-		codigo = codigo +id_padre+'->cond'+id_hijo+'\n';
+		codigo = codigo +id_padre+'(right)->cond'+id_hijo+'\n';
 }
 
 function padre_elegido(){
