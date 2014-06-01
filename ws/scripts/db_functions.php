@@ -107,7 +107,7 @@ class DB_Functions {
     private function fetch_notas($email){
         
         $sql = $this->con->prepare('
-        SELECT * FROM notas WHERE email_usuario = ?');
+        SELECT * FROM notas WHERE email_usuario = ? and borrado=false');
 
         $sql->execute(array($email));
         $filas = $sql->fetchAll();
