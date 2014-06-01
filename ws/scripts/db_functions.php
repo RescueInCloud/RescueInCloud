@@ -58,7 +58,7 @@ class DB_Functions {
         SELECT ct.*
         FROM protocolos p
         INNER JOIN cajatexto ct ON ct.id_protocolo=p.id_protocolo
-        WHERE p.email_usuario=?');
+        WHERE p.email_usuario=? and p.borrado=false');
 
         $sql->execute(array($email));
         $cajas = $sql->fetchAll();
@@ -68,7 +68,7 @@ class DB_Functions {
         FROM protocolos p
         INNER JOIN cajatexto_hijos ch ON p.id_protocolo=ch.id_protocolo
         WHERE
-        p.email_usuario=?');
+        p.email_usuario=? and p.borrado=false');
 
         $sql2->execute(array($email));
         $relaciones = $sql2->fetchAll();
