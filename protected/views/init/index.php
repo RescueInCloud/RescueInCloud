@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
-
+    <link rel="shortcut icon" href="<?php echo Yii::app()->request->baseUrl; ?>/img/EMSicon.png">
+    
     <title>Emergency Medical Service</title>
 
     <!-- Bootstrap core CSS -->
@@ -174,7 +174,7 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; Emergency Medical Service in cloud Company 2013-2014 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
       </footer>
 
     </div><!-- /.container -->
