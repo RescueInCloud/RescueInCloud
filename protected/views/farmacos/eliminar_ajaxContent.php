@@ -2,7 +2,13 @@
 <div style="height:20px; background: transparent;">
     <hr style="display:none;" />
 </div>
-
+<h6>
+    <b> · Lista de fármacos disponibles: </b>
+</h6>
+</h6>
+<h6 style="color:#A4A4A4;">
+    Haz click en el botón de la derecha para eliminarlo.
+</h6>
 <div style="height:10px; background: transparent;">
     <hr style="display:none;" />
 </div>

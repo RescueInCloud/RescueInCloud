@@ -5,6 +5,7 @@ class FarmacosController extends Controller
     //public $layout = 'webroot.themes.layoutit.views.layouts.plantilla';
     public $layout = 'plantilla';
     public $accion = "index"; //solo peude tener 4 valores: index, crear, eliminar, buscar
+    private $num_farmacos_pagina=5;
     
     public function actionIndex()
     { 
@@ -15,6 +16,19 @@ class FarmacosController extends Controller
         $this->render('index',compact("result_set"));
     }
        
+    public function actionPaginarIndex($id)
+    {         
+        $num_pagina = $id;
+        $this->accion = "paginaIndex";
+        $email_usuario = Yii::app()->user->getName();
+        $model = new Farmacos();
+        $num_protocolos = $model->num_protocolos($email_usuario);
+        $ini = $this->num_farmacos_pagina*($num_pagina-1);
+        $result_set = $model->listar_protocolos($ini, $this->num_protolocos_pagina, $email_usuario);
+        $this->render('index', compact("result_set","num_protocolos","num_pagina"));
+       
+    }
+    
     public function actionCrear()
     { 
         $this->accion = "crear";

@@ -236,9 +236,19 @@ class Farmacos {
                       SET borrado = 1 
                       WHERE id_farmaco    = ".$id." 
                         AND email_usuario = '".$email_usuario."';";
+          
             }
             $command=$this->connection->createCommand($sql);
             $row_count = $command->execute();
+            
+            if (($row_count > 0) and ($id >= 10000 )) {
+                $sqlDel= "UPDATE farmacos_propios 
+                          SET borrado = 1 
+                          WHERE id_farmaco    = ".$id;
+                
+                $commandDel=$this->connection->createCommand($sqlDel);
+                $row_countDel = $commandDel->execute();
+            }
             
             $transaction->commit();
             

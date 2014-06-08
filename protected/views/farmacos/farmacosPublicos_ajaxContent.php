@@ -1,4 +1,4 @@
-<div id="partial">
+
 <div style="height:20px; background: transparent;">
     <hr style="display:none;" />
 </div>
@@ -85,4 +85,3 @@
                     <a href="#">Next</a>
             </li>
     </ul>
-</div>
