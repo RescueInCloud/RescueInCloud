@@ -45,7 +45,7 @@
                                 <td><?php echo $dato["descripcion_farmaco"] ?></td>
                                 <td>
                                     <?php $id=$dato["id_farmaco"] ?>
-                                    <a href="<?php echo Yii::app()->createUrl('/farmacos/eliminar/'.$id)?>">
+                                    <a href="<?php echo Yii::app()->createUrl('/farmacos/eliminarFarmaco/'.$id)?>">
                                        <i class="glyphicon glyphicon-remove-circle"></i>
                                     </a>
                                 </td>

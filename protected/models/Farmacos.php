@@ -170,7 +170,8 @@ class Farmacos {
         $transaction=$this->connection->beginTransaction();
         try
         {
-            if ($id_farmaco < 10000 ){ // se trata de un fármaco público            
+            if ($id_farmaco < 10000 ){ 
+                //Se trata de un fármaco público:          
                 //desvinculamos el fármaco público del usuario marcándolo como borrado:
                 $sql="UPDATE relnm_farmacos_publicos_usuarios 
                       SET borrado = 1 
@@ -222,18 +223,18 @@ class Farmacos {
         $transaction=$this->connection->beginTransaction();
         try
         {
-            if ($id_farmaco < 10000 ){ // se trata de un fármaco público            
+            if ($id < 10000 ){ // se trata de un fármaco público            
                 
                 $sql="UPDATE relnm_farmacos_publicos_usuarios 
                       SET borrado = 1 
-                      WHERE id_farmaco    = ".$id_farmaco." 
+                      WHERE id_farmaco    = ".$id." 
                         AND email_usuario = '".$email_usuario."';";                
             }
             else { // se trata de un fármaco propio
                 
                 $sql="UPDATE rel1n_farmacos_propios_usuarios 
                       SET borrado = 1 
-                      WHERE id_farmaco    = ".$id_farmaco." 
+                      WHERE id_farmaco    = ".$id." 
                         AND email_usuario = '".$email_usuario."';";
             }
             $command=$this->connection->createCommand($sql);
