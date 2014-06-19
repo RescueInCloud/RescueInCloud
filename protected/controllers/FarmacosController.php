@@ -12,8 +12,10 @@ class FarmacosController extends Controller
         $this->accion = "index";
         $email_usuario = Yii::app()->user->getName();
         $model = new Farmacos();
-        $result_set = $model->listar_farmacos_usuario(0, 5, $email_usuario);
-        $this->render('index',compact("result_set"));
+        $num_farmacos = $model->num_farmacos($email_usuario);
+        $result_set = $model->listar_farmacos_usuario(0, $this->num_farmacos_pagina, $email_usuario);
+        $this->render('index',compact("result_set", "num_farmacos"));
+    
     }
        
     public function actionPaginarIndex($id)
@@ -22,10 +24,10 @@ class FarmacosController extends Controller
         $this->accion = "paginaIndex";
         $email_usuario = Yii::app()->user->getName();
         $model = new Farmacos();
-        $num_protocolos = $model->num_protocolos($email_usuario);
+        $num_farmacos = $model->num_farmacos($email_usuario);
         $ini = $this->num_farmacos_pagina*($num_pagina-1);
-        $result_set = $model->listar_protocolos($ini, $this->num_protolocos_pagina, $email_usuario);
-        $this->render('index', compact("result_set","num_protocolos","num_pagina"));
+        $result_set = $model->listar_farmacos_usuario($ini, $this->num_farmacos_pagina, $email_usuario);
+        $this->render('index', compact("result_set","num_farmacos","num_pagina"));
        
     }
     

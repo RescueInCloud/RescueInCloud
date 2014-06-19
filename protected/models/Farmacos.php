@@ -32,6 +32,33 @@ class Farmacos {
         return $result_rows;
     }
     
+    public function num_farmacos($email_usuario){
+        
+        $sql ="SELECT COUNT(*)
+               FROM
+               (
+                SELECT Pro.*
+                  FROM farmacos_propios                Pro,
+                       rel1n_farmacos_propios_usuarios PrU
+                 WHERE Pro.id_farmaco    = PrU.id_farmaco
+                   AND PrU.borrado       = 0
+                   AND PrU.email_usuario = '".$email_usuario."'
+
+                 UNION 
+
+                SELECT Pub.*
+                  FROM farmacos_publicos                Pub,
+                       relnm_farmacos_publicos_usuarios PuU
+                 WHERE Pub.id_farmaco    = PuU.id_farmaco
+                   AND PuU.borrado       = 0
+                   AND PuU.email_usuario = '".$email_usuario."'
+                )Farmacos";
+        $result_rows=$this->connection->createCommand($sql)->queryScalar();
+        
+        return $result_rows;
+        
+    }
+        
     public function listar_farmacos_publicos($ini, $lenght, $email_usuario){
        
         $sql="SELECT NEW.*

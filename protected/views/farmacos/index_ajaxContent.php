@@ -63,25 +63,51 @@
     </tbody>
     </table>
     <ul class="pagination pagination-sm">
-            <li>
-                    <a href="#">Prev</a>
-            </li>
-            <li>
-                    <a href="#">1</a>
-            </li>
-            <li>
-                    <a href="#">2</a>
-            </li>
-            <li>
-                    <a href="#">3</a>
-            </li>
-            <li>
-                    <a href="#">4</a>
-            </li>
-            <li>
-                    <a href="#">5</a>
-            </li>
-            <li>
-                    <a href="#">Next</a>
-            </li>
+        
+        <?php
+            $num_pag = 1;
+            $num_paginas = ceil($num_farmacos/5);//la funcion ceil redondea hacia arriba
+            
+            $pag_actual = 1;
+            if($this->accion==="paginaIndex"){
+                $pag_actual = $num_pagina;
+            }
+            
+            if($pag_actual!=1){
+        ?>
+                <li><a href="<?php echo Yii::app()->createUrl('/farmacos/paginarIndex/'.($pag_actual-1))?>">Anterior</a></li>
+        <?php
+            }
+            
+            while($num_pag<=$num_paginas){
+        ?>
+                
+                    <?php
+                    if($num_pag==$pag_actual){
+                    ?>
+                        <li class="active"><a href="#" ><?php echo $num_pag ?></a></li>
+                        
+                    <?php
+                    }
+                    else{
+                        
+                    ?>
+                        <li><a href="<?php echo Yii::app()->createUrl('/farmacos/paginarIndex/'.$num_pag)?>">
+                            <?php echo $num_pag ?>
+                            </a>
+                        </li>
+                    <?php
+                    }
+                    ?>
+                
+        <?php
+                $num_pag = $num_pag +1;
+            }
+            
+            if($pag_actual!=$num_paginas){
+        ?>
+                <li><a href="<?php echo Yii::app()->createUrl('/farmacos/paginarIndex/'.($pag_actual+1))?>">Siguiente</a></li>
+        <?php
+            }
+        ?>
     </ul>
