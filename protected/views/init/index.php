@@ -134,11 +134,47 @@
 
       <div class="row featurette">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">EMS in Cloud para Android <span class="text-muted"></span></h2>
+          <p class="lead">¡Sincroniza tus datos con tu dispositivo móvil! Pulsa en el botón para descargar la aplicación.</p>
+          <a href="https://play.google.com/store/apps/details?id=es.ucm.ric">
+            <img alt="Get it on Google Play"
+                 src="<?php echo Yii::app()->request->baseUrl; ?>/img/es_google_play.png" />
+          </a>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+        <div class="col-md-1">  
+        </div>
+        <div class="col-md-4">
+          <div id="carousel_fade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+
+                    <div class="item active">
+                            <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/CarouselAndroid/App_init.png">                          
+                    </div>
+
+                    <div class="item ">
+                            <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/CarouselAndroid/App_menu.png"> 
+                    </div>
+                
+                    <div class="item ">
+                            <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/CarouselAndroid/App_home.png"> 
+                    </div>
+                    
+                    <div class="item ">
+                            <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/CarouselAndroid/App_protocolos.png"> 
+                    </div>
+                
+                    <div class="item ">
+                            <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/CarouselAndroid/App_protocolos2.png"> 
+                    </div>
+                    
+                    <div class="item ">
+                            <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/CarouselAndroid/App_farmacos.png"> 
+                    </div>
+
+            </div>
+            <a class="carousel-control left btn-control " href="#carousel_fade" data-slide="prev">‹</a>
+            <a class="carousel-control right btn-control" href="#carousel_fade" data-slide="next">›</a>
+          </div>          
         </div>
       </div>
 
@@ -146,23 +182,11 @@
 
       <div class="row featurette">
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <img class="featurette-image img-responsive" src="<?php echo Yii::app()->request->baseUrl; ?>/img/Example_Protocolos.png">
         </div>
         <div class="col-md-7">
-          <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+          <h2 class="featurette-heading">EMS in Cloud. <span class="text-muted">¿Aún no te has registrado?</span></h2>
+          <p class="lead">¡Crea tus protocolos y sincroniza con tu aplicación!</p>
         </div>
       </div>
 
@@ -173,8 +197,8 @@
 
       <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; Emergency Medical Service in cloud Company 2013-2014 &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p class="pull-right"><a href="#">Arriba</a></p>
+        <p>&copy; Emergency Medical Service in cloud Company 2013-2014 &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos y Condiciones</a></p>
       </footer>
 
     </div><!-- /.container -->
