@@ -28,7 +28,7 @@
                                             Fármacos
                                     </h3>
                                     <p>
-                                            EMS te permite crear, añadir y editar fármacos.
+                                            EMS te permite crear, añadir y editar tus propios fármaco o elegir uno predefinido.
                                     </p>
                                     <p>
                                             <a class="btn btn-primary" href="./farmacos">Ir a fármacos</a>
@@ -44,7 +44,8 @@
                                             Notas de Intervención
                                     </h3>
                                     <p>
-                                            Utiliza esta herramienta para visualizar las notas que efectúas en una intervención mediante tu aplicación Android.
+                                            Puedes visualizar las notas que efectúas en una 
+                                            intervención mediante tu aplicación Android.
                                     </p>
                                     <p>
                                             <a class="btn btn-primary" href="./notas">Ir a notas</a>

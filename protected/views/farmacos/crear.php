@@ -34,3 +34,6 @@
         
     </div>
 </div>
+<script type="text/javascript">
+  seleccionarFarmacos();
+</script>
