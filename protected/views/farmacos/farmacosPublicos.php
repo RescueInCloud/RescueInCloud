@@ -17,17 +17,38 @@
     
     <div class="col-md-10 column">
         <?php 
-        if($this->accion==="index"){
-            $this->renderPartial('index_ajaxContent', array('result_set'=>$result_set)); 
+         if($this->accion==="index"){
+            $this->renderPartial('index_ajaxContent', 
+            array('result_set'=>$result_set,'num_farmacos'=>$num_farmacos)); 
+        }
+        else if($this->accion==="paginaIndex"){
+            $this->renderPartial('index_ajaxContent', 
+            array('result_set'=>$result_set,
+                'num_farmacos'=>$num_farmacos,
+                'num_pagina'=>$num_pagina)); 
         }
         else if($this->accion==="crear"){
             $this->renderPartial('crear_ajaxContent'); 
         }
         else if($this->accion==="eliminar"){
-            $this->renderPartial('eliminar_ajaxContent', array('result_set'=>$result_set)); 
+            $this->renderPartial('eliminar_ajaxContent', 
+            array('result_set'=>$result_set,'num_farmacos'=>$num_farmacos));
+        }
+        else if($this->accion==="paginaEliminar"){
+            $this->renderPartial('eliminar_ajaxContent', 
+            array('result_set'=>$result_set,
+                'num_farmacos'=>$num_farmacos,
+                'num_pagina'=>$num_pagina)); 
         }
         else if($this->accion==="farmacosPublicos"){
-            $this->renderPartial('farmacosPublicos_ajaxContent', array('result_set'=>$result_set)); 
+            $this->renderPartial('farmacosPublicos_ajaxContent', 
+            array('result_set'=>$result_set,'num_farmacos'=>$num_farmacos));
+        }
+        else if($this->accion==="paginaFarmacosPublicos"){
+            $this->renderPartial('farmacosPublicos_ajaxContent', 
+            array('result_set'=>$result_set,
+                'num_farmacos'=>$num_farmacos,
+                'num_pagina'=>$num_pagina)); 
         }
         else if($this->accion==="insertar"){
             $this->renderPartial('insertar_ajaxContent');

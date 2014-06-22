@@ -5,8 +5,7 @@
         </div>
         <ul class="nav nav-pills nav-stacked">
           <li class="nav-header"></li>
-          <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/farmacos/index"><i class="glyphicon glyphicon-user"></i> Mis Fármacos</a></li>
-          
+          <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/farmacos/index"><i class="glyphicon glyphicon-user"></i> Mis Fármacos</a></li>          
           <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/farmacos/crear"><i class="glyphicon glyphicon-plus"></i> Añadir Fármacos</a></li>
           <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/farmacos/eliminar"><i class="glyphicon glyphicon-remove"></i> Eliminar Fármaco</a></li>
           <li><a href="#"><i class="glyphicon glyphicon-search"></i> Buscar Fármaco</a></li>

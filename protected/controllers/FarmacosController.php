@@ -70,13 +70,24 @@ class FarmacosController extends Controller
         $this->accion = "eliminar";
         $email_usuario = Yii::app()->user->getName();
         $model = new Farmacos();
+        $num_farmacos = $model->num_farmacos($email_usuario);
         $result_set = $model->listar_farmacos_usuario(0, 5, $email_usuario);
-        $this->render('eliminar',compact("result_set"));
+        $this->render('eliminar',compact("result_set", "num_farmacos"));
+    }
+        
+    public function actionPaginarEliminar($id)
+    { 
+        $num_pagina = $id;
+        $this->accion = "paginaEliminar";
+        $email_usuario = Yii::app()->user->getName();
+        $model = new Farmacos();
+        $num_farmacos = $model->num_farmacos($email_usuario);
+        $ini = $this->num_farmacos_pagina*($num_pagina-1);
+        $result_set = $model->listar_farmacos_usuario($ini, $this->num_farmacos_pagina, $email_usuario);;
+        $this->render('eliminar',compact("result_set","num_farmacos","num_pagina"));
     }
     
     
-    
-    //FIXMEEEEE
     public function actionEliminarFarmaco($id)
     { 
         //$this->accion = "eliminar";
@@ -93,11 +104,23 @@ class FarmacosController extends Controller
         $this->accion = "farmacosPublicos";
         $email_usuario = Yii::app()->user->getName();
         $model = new Farmacos();
-        $result_set = $model->listar_farmacos_publicos(0, 5 , $email_usuario);
-        $this->render('farmacosPublicos',compact("result_set"));
+        $num_farmacos = $model->num_farmacos_publicos($email_usuario);
+        $result_set = $model->listar_farmacos_publicos(0, $this->num_farmacos_pagina, $email_usuario);
+        $this->render('farmacosPublicos',compact("result_set", "num_farmacos"));
     }
     
-    
+    public function actionPaginarFarmacosPublicos($id)
+    { 
+        $num_pagina = $id;
+        $this->accion = "paginaFarmacosPublicos";
+        $email_usuario = Yii::app()->user->getName();
+        $model = new Farmacos();
+        $num_farmacos = $model->num_farmacos_publicos($email_usuario);
+        $ini = $this->num_farmacos_pagina*($num_pagina-1);
+        $result_set = $model->listar_farmacos_publicos($ini, $this->num_farmacos_pagina, $email_usuario);;
+        $this->render('farmacosPublicos',compact("result_set","num_farmacos","num_pagina"));
+    }
+       
     public function actionInsertar()
     {
         $this->accion = "insertar";
@@ -105,6 +128,7 @@ class FarmacosController extends Controller
         //$this->renderPartial('insertar_ajaxContent', compact("result_set"));
         $this->render('insertar');
     }
+    
     
     /* actionAltaFarmaco: Da de alta un fármaco propio. */
     public function actionAltaFarmaco()

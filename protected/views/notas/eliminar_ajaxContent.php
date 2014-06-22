@@ -43,8 +43,8 @@
                                 <td><?php echo $dato["nota_creada_en"] ?></td>
                                 <td>
                                     <?php $id=$dato["id_nota"] ?>
-                                    <a href="<?php echo Yii::app()->createUrl('/notas/editar/'.$id)?>">
-                                       <i class="glyphicon glyphicon-edit"></i>
+                                    <a href="<?php echo Yii::app()->createUrl('/notas/eliminarNota/'.$id)?>">
+                                       <i class="glyphicon glyphicon-remove-circle"></i>
                                     </a>
                                 </td>
                             </tr>
@@ -61,13 +61,13 @@
             $num_paginas = ceil($num_notas/5);//la funcion ceil redondea hacia arriba
             
             $pag_actual = 1;
-            if($this->accion==="paginaIndex"){
+            if($this->accion==="paginaEliminar"){
                 $pag_actual = $num_pagina;
             }
             
             if($pag_actual!=1){
         ?>
-                <li><a href="<?php echo Yii::app()->createUrl('/notas/paginarIndex/'.($pag_actual-1))?>">Anterior</a></li>
+                <li><a href="<?php echo Yii::app()->createUrl('/notas/paginarEliminar/'.($pag_actual-1))?>">Anterior</a></li>
         <?php
             }
             
@@ -84,7 +84,7 @@
                     else{
                         
                     ?>
-                        <li><a href="<?php echo Yii::app()->createUrl('/notas/paginarIndex/'.$num_pag)?>">
+                        <li><a href="<?php echo Yii::app()->createUrl('/notas/paginarEliminar/'.$num_pag)?>">
                             <?php echo $num_pag ?>
                             </a>
                         </li>
@@ -98,7 +98,7 @@
             
             if($pag_actual!=$num_paginas){
         ?>
-                <li><a href="<?php echo Yii::app()->createUrl('/notas/paginarIndex/'.($pag_actual+1))?>">Siguiente</a></li>
+                <li><a href="<?php echo Yii::app()->createUrl('/notas/paginarEliminar/'.($pag_actual+1))?>">Siguiente</a></li>
         <?php
             }
         ?>

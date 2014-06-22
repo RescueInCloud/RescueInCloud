@@ -98,7 +98,48 @@ class Farmacos {
         return $result_rows;
     }
     
-    
+    public function num_farmacos_publicos($email_usuario){
+        
+        $sql ="SELECT COUNT(*)
+               FROM
+               (
+                SELECT NEW.*
+                  FROM 
+                    farmacos_publicos NEW
+                  LEFT JOIN
+                  ( 
+                    SELECT Pro.*
+                    FROM farmacos_propios                Pro,
+                         rel1n_farmacos_propios_usuarios PrU
+                    WHERE Pro.id_farmaco    = PrU.id_farmaco
+                      AND PrU.borrado       = 0
+                      AND PrU.email_usuario = '".$email_usuario."'
+
+                    UNION 
+
+                    SELECT Pub.*
+                    FROM farmacos_publicos                Pub,
+                         relnm_farmacos_publicos_usuarios PuU
+                    WHERE Pub.id_farmaco    = PuU.id_farmaco
+                      AND PuU.borrado       = 0
+                      AND PuU.email_usuario = '".$email_usuario."'
+                  )NotNEW
+                     ON NEW.id_farmaco           = NotNEW.id_farmaco
+                    AND NEW.nombre_farmaco       = NotNEW.nombre_farmaco
+                    AND NEW.nombre_fabricante    = NotNEW.nombre_fabricante
+                    AND NEW.presentacion_farmaco = NotNEW.presentacion_farmaco
+                    AND NEW.tipo_administracion  = NotNEW.tipo_administracion
+                    AND NEW.creado_en            = NotNEW.creado_en
+                    AND NEW.modificado_en        = NotNEW.modificado_en
+                    AND NEW.descripcion_farmaco  = NotNEW.descripcion_farmaco
+                    AND NEW.borrado              = NotNEW.borrado
+                  WHERE NotNEW.id_farmaco IS NULL
+                )Farmacos";
+        $result_rows=$this->connection->createCommand($sql)->queryScalar();
+        
+        return $result_rows;
+        
+    }
     
     public function add_rel_farmacos_publicos ($id, $email_usuario){
         $transaction=$this->connection->beginTransaction();

@@ -6,6 +6,8 @@
         <ul class="nav nav-pills nav-stacked">
           <li class="nav-header"></li>
           <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/notas/index"><i class="glyphicon glyphicon-user"></i> Mis Notas</a></li>
+          <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/notas/crear"><i class="glyphicon glyphicon-user"></i> Añadir Notas</a></li>
+          <li><a href="<?php echo Yii::app()->request->baseUrl; ?>/notas/eliminar"><i class="glyphicon glyphicon-user"></i> Eliminar Nota</a></li>
         </ul>
 
     </div>
@@ -14,7 +16,30 @@
     <div class="col-md-10 column">
         <?php 
         if($this->accion==="index"){
-            $this->renderPartial('index_ajaxContent', array('result_set'=>$result_set)); 
+            $this->renderPartial('index_ajaxContent', 
+            array('result_set'=>$result_set,'num_notas'=>$num_notas)); 
+        }
+        else if($this->accion==="paginaIndex"){
+            $this->renderPartial('index_ajaxContent', 
+            array('result_set'=>$result_set,
+                'num_notas'=>$num_notas,
+                'num_pagina'=>$num_pagina)); 
+        }
+        else if($this->accion==="editar"){
+            $this->renderPartial('editar_ajaxContent', array('nota'=>$nota)); 
+        }
+        else if($this->accion==="crear"){
+            $this->renderPartial('crear_ajaxContent'); 
+        }
+        else if($this->accion==="eliminar"){
+            $this->renderPartial('eliminar_ajaxContent', 
+            array('result_set'=>$result_set,'num_notas'=>$num_notas));
+        }
+        else if($this->accion==="paginaEliminar"){
+            $this->renderPartial('eliminar_ajaxContent', 
+            array('result_set'=>$result_set,
+                'num_notas'=>$num_notas,
+                'num_pagina'=>$num_pagina)); 
         }
         ?>
         
