@@ -182,7 +182,7 @@
 
       <div class="row featurette">
         <div class="col-md-5">
-          <img class="featurette-image img-responsive" src="<?php echo Yii::app()->request->baseUrl; ?>/img/Example_Protocolos.png">
+          <img class="featurette-image img-responsive" src="<?php echo Yii::app()->request->baseUrl; ?>/img/example_protocolos.png">
         </div>
         <div class="col-md-7">
           <h2 class="featurette-heading">EMS in Cloud. <span class="text-muted">¿Aún no te has registrado?</span></h2>
