@@ -30,6 +30,9 @@
         else if($this->accion==="crear"){
            $this->renderPartial('crear_ajaxContent'); 
         }
+        else if($this->accion==="editar"){
+            $this->renderPartial('editar_ajaxContent', array('farmaco'=>$farmaco)); 
+        }
         else if($this->accion==="eliminar"){
             $this->renderPartial('eliminar_ajaxContent', 
             array('result_set'=>$result_set,'num_farmacos'=>$num_farmacos));

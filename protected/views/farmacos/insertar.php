@@ -25,6 +25,9 @@
         else if($this->accion==="eliminar"){
             $this->renderPartial('eliminar_ajaxContent', array('result_set'=>$result_set)); 
         }
+        else if($this->accion==="editar"){
+            $this->renderPartial('editar_ajaxContent', array('farmaco'=>$farmaco)); 
+        }
         else if($this->accion==="farmacosPublicos"){
             $this->renderPartial('farmacosPublicos_ajaxContent', array('result_set'=>$result_set)); 
         }

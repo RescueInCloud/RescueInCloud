@@ -27,6 +27,9 @@
                 'num_farmacos'=>$num_farmacos,
                 'num_pagina'=>$num_pagina)); 
         }
+        else if($this->accion==="editar"){
+            $this->renderPartial('editar_ajaxContent', array('farmaco'=>$farmaco)); 
+        }
         else if($this->accion==="crear"){
            $this->renderPartial('crear_ajaxContent'); 
         }
