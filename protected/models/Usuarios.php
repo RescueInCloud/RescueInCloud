@@ -11,18 +11,21 @@ class Usuarios {
     }
     
     //Read
-    public function validarUsuarios($email_usuario, $pass){
+    public function validarUsuarios($email_usuario, $pass_to_login){
         
-        $sql="select * from usuarios where 1=1 and ";
-        $sql.= "email_usuario='".$email_usuario."' and ";     
-        $sql.= "password='".$pass."' ;";     
-        $rows=$this->connection->createCommand($sql)->queryAll();
-        if(count($rows)>0){
-            return true;
+        $sql="select password from usuarios where 1=1 and ";
+        $sql.= "email_usuario='".$email_usuario."'";     
+            
+        $rows=$this->connection->createCommand($sql)->query();
+        
+        foreach($rows as $fila) {
+            $hash = $fila['password'];
+            if(CPasswordHelper::verifyPassword($pass_to_login, $hash)){
+               return true;
+            }
         }
-        else{
-            return false;
-        }
+        
+        return false;
         
     }
     
@@ -38,10 +41,12 @@ class Usuarios {
          * '0000-00-00 00:00:00', '0000-00-00 00:00:00', '0');
          */
         
+        $hash = CPasswordHelper::hashPassword($password);
+        
         $sql="INSERT INTO usuarios ";
         $sql.= "( email_usuario, password, nombre, apellidos, genero, fecha_nacimiento, centro_trabajo, usuario_creado_en) ";
         $sql.= "VALUES ";
-        $sql.= "( '".$email_usuario."','".$password."','".$nombre."','".
+        $sql.= "( '".$email_usuario."','".$hash."','".$nombre."','".
                 $apellidos."',".$genero.",'".$fecha_nac."','".$centro."', null ) ";
         $rows=$this->connection->createCommand($sql)->execute();
         if(count($rows)>0){

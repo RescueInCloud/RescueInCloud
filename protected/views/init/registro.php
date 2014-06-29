@@ -96,7 +96,7 @@
               <div class="form-group">
                 <label class="control-label" for="PasswordUsuario">Contraseña:</label>
                 <div class="input-group">
-                  <input type="password" class="form-control" name="PasswordUsuario" id="PasswordUsuario" placeholder="Contraseña." required="" minlength="8" maxlength="16">
+                  <input type="password" class="form-control" name="PasswordUsuario" id="PasswordUsuario" placeholder="Contraseña." required="" pattern=".{8,}" required title="8 caracteres como mínimo">
                   <span class="input-group-addon"><i class="input-xlarge glyphicon glyphicon-ok form-control-feedback"></i></span></div>
               </div>
 
