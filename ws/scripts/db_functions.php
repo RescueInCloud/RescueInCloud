@@ -29,6 +29,7 @@ class DB_Functions {
     // constructor
     function __construct() {
         include_once './db_connect.php';
+        include_once './CPasswordHelper.php';
         // connecting to database
         $this->db = new DB_Connect();
         $this->con = $this->db->connect();
@@ -38,18 +39,21 @@ class DB_Functions {
     function __destruct() {
     }
     
-    private function validar($email, $password){
+    private function validar($email, $pass_to_login){
         
-        $sql = $this->con->prepare('
-        SELECT EXISTS(SELECT 1 FROM usuarios WHERE email_usuario=? and password=? )');
-        $sql->execute(array($email,$password));
-
-        $username_exists = (bool) $sql->fetchColumn();
-        if(!$username_exists){
-            return false;
+        $sql = $this->con->prepare('SELECT * FROM usuarios WHERE email_usuario=?');
+        $sql->execute(array($email));
+        $rows = $sql->fetchAll();
+        
+        foreach($rows as $fila) {
+            $hash = $fila['password'];
+            if(CPasswordHelper::verifyPassword($pass_to_login, $hash)){
+               return true;
+            }
         }
+        
             
-        return true;
+        return false;
     }
     
     private function fetch_protocolos($email){
