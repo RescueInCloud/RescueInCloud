@@ -35,7 +35,7 @@
         <!-- sidebar -->
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
             <ul class="nav">
-              <li class="active"><a href="<?php echo Yii::app()->request->baseUrl; ?>">Home</a></li>          
+              <li class="active"><a href="<?php echo Yii::app()->getBaseUrl(true); ?>">Home</a></li>          
             </ul>
         </div>
   	
