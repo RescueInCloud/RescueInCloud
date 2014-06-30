@@ -198,7 +198,9 @@
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Arriba</a></p>
-        <p>&copy; Emergency Medical Service in cloud Company 2013-2014 &middot; <a href="#">Privacidad</a> &middot; <a href="#">Terminos y Condiciones</a></p>
+        <p>&copy; Emergency Medical Service in cloud Company 2013-2014 &middot; <a href="#">Privacidad</a> &middot; 
+        <a href="<?php echo Yii::app()->request->baseUrl; ?>/init/avisolegal">Terminos y Condiciones</a>
+        </p>
       </footer>
 
     </div><!-- /.container -->

@@ -12,6 +12,11 @@ class InitController extends Controller
         $this->render('login');
     }
     
+    public function actionAvisolegal()
+    { 
+        $this->render('avisolegal');
+    }
+    
     public function actionValidar()
     { 
         if(isset($_POST['email']) && isset($_POST['password']))
